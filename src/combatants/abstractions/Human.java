@@ -1,0 +1,51 @@
+package combatants.abstractions;
+
+import weapons.abstractions.Weapon;
+
+public abstract class Human implements Combatant{
+    double healthPoints;
+    int age;
+    double damage;
+    String name;
+    Weapon weapon;
+
+    public double getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(double healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getDamage() {
+        return damage;
+    }
+
+    public void setDamage(double damage) {
+        this.damage = damage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+}
