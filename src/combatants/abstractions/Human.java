@@ -54,5 +54,7 @@ public abstract class Human implements Combatant {
         this.age = age;
     }
 
-
+    public int getAge() {
+        return age;
+    }
 }

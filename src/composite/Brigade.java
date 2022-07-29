@@ -70,5 +70,7 @@ public class Brigade extends Unit {
         this.warMachine = warMachine;
     }
 
-
+    public Machine getWarMachine() {
+        return warMachine;
+    }
 }

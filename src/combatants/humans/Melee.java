@@ -13,4 +13,9 @@ public class Melee extends Human {
             this.takeDamage(((Human) attacker).getDamage());
         }
     }
+
+    @Override
+    public String toString() {
+        return "Melee - Name: " + this.getName() + " Weapon: " + this.getWeapon();
+    }
 }

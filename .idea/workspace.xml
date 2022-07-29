@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28662871-11dd-4d43-9145-6d85a43fe012" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="28662871-11dd-4d43-9145-6d85a43fe012" name="Changes" comment="cleaned up the code">
+      <change afterPath="$PROJECT_DIR$/src/utils/ArmySoldiersByWeaponType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/AverageArmyAge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/HumansAboveAge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/OverallArmyDamage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/OverallArmyDurability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/SortByName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/SortByTypeAndName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/humans/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/General.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/humans/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Melee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composite/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Army.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composite/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/HumanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/HumanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/MachineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/MachineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/WeaponFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/WeaponFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/globals/WeaponMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mediator/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Coalition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitor/BattleLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitor/BattleLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitor/ElementInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapons/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/MeleeWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapons/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/RangedWeapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -79,6 +81,14 @@
       <option name="presentableId" value="Default" />
       <updated>1659033879919</updated>
     </task>
+    <task id="LOCAL-00001" summary="cleaned up the code">
+      <created>1659058438367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659058438367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +102,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cleaned up the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up the code" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -99,6 +113,11 @@
           <url>file://$PROJECT_DIR$/src/Battle.java</url>
           <line>25</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/composite/Army.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

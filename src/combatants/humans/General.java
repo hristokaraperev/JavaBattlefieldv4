@@ -19,5 +19,8 @@ public class General extends Human {
         this.experience = experience;
     }
 
-
+    @Override
+    public String toString() {
+        return "Name: " + this.getName() + " HP: " + this.getHealthPoints() + " War knowledge: " + this.getExperience();
+    }
 }

@@ -2,8 +2,10 @@ package composite;
 
 import combatants.abstractions.Combatant;
 import combatants.abstractions.Human;
+import combatants.abstractions.Machine;
 import combatants.humans.General;
 import composite.abstractions.Unit;
+import utils.*;
 
 import java.util.Iterator;
 import java.util.List;
@@ -16,6 +18,7 @@ public class Army extends Unit {
     private int totalArmyCasualties = 0;
     private Combatant general;
     private List<Unit> brigades;
+    private List<Machine> machines;
     private double armyMorale = 1;
 
     @Override
@@ -75,6 +78,13 @@ public class Army extends Unit {
         return totalArmyCasualties;
     }
 
+    public List<Machine> getMachines() {
+        return machines;
+    }
+
+    public void setMachines(List<Machine> machines) {
+        this.machines = machines;
+    }
 
     public List<Unit> getBrigades() {
         return brigades;
@@ -104,5 +114,17 @@ public class Army extends Unit {
     @Override
     public String toString() {
         return "Army - General: " + ((Human) general).getName() + " HP: " + ((Human) general).getHealthPoints() + " Soldiers left: " + currentArmySize;
+    }
+
+    public void printAllArmyWeapons() {
+        System.out.println("GENERAL");
+        System.out.println(general);
+        for (Unit brigade : brigades) {
+            System.out.println("BRIGADE");
+            for (Combatant combatant : ((Brigade) brigade).getHumans()) {
+                System.out.println(combatant);
+            }
+            System.out.println(((Brigade)brigade).getWarMachine());
+        }
     }
 }

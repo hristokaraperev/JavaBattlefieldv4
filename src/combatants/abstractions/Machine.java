@@ -29,4 +29,12 @@ public abstract class Machine implements Combatant {
         this.durability = durability;
     }
 
+    public int getDurability() {
+        return durability;
+    }
+
+    @Override
+    public String toString() {
+        return "Machine - Name: " + this.name;
+    }
 }

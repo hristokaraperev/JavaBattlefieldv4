@@ -13,4 +13,9 @@ public class Ranged extends Human {
             this.takeDamage(((Human) attacker).getDamage());
         }
     }
+
+    @Override
+    public String toString() {
+        return "Ranged - Name: " + this.getName() + " Weapon: " + this.getWeapon();
+    }
 }

@@ -1,6 +1,7 @@
 package factories;
 
 import combatants.abstractions.Combatant;
+import combatants.abstractions.Machine;
 import composite.Army;
 import composite.Brigade;
 import composite.abstractions.Unit;
@@ -28,9 +29,12 @@ public class CoalitionBuilder {
         for (int i = 0; i < ARMIES_PER_COALITION; i++) {
             Army army = new Army();
             List<Unit> brigades = new ArrayList<>();
+            List<Machine> machines = new ArrayList<>();
             for (int j = 0; j < BRIGADES_PER_ARMY; j++) {
                 Brigade brigade = new Brigade();
-                brigade.setWarMachine(machineFactory.createMachine(machineTypes[rng.nextInt(machineTypes.length)]));
+                Machine machine = machineFactory.createMachine(machineTypes[rng.nextInt(machineTypes.length)]);
+                brigade.setWarMachine(machine);
+                machines.add(machine);
                 List<Combatant> soldiers = new ArrayList<>();
                 for (int k = 0; k < SOLDIERS_PER_BRIGADE; k++) {
                     Combatant soldier = humanFactory.createHuman(humanTypes[rng.nextInt(humanTypes.length)]);
@@ -40,6 +44,7 @@ public class CoalitionBuilder {
                 brigades.add(brigade);
             }
             army.setBrigades(brigades);
+            army.setMachines(machines);
             army.setGeneral(humanFactory.createHuman("GENERAL"));
             army.setInitialArmyCapacity(BRIGADES_PER_ARMY * SOLDIERS_PER_BRIGADE);
             armies.add(army);
