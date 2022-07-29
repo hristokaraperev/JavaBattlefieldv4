@@ -2,28 +2,12 @@ package combatants.abstractions;
 
 import weapons.abstractions.Weapon;
 
-public abstract class Human implements Combatant{
+public abstract class Human implements Combatant {
     double healthPoints;
     int age;
     double damage;
     String name;
     Weapon weapon;
-
-    public double getHealthPoints() {
-        return healthPoints;
-    }
-
-    public void setHealthPoints(double healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public double getDamage() {
         if (weapon.getDurability() > 0) {
@@ -32,11 +16,14 @@ public abstract class Human implements Combatant{
         } else {
             return damage * 0.2;
         }
-
     }
 
     public void setDamage(double damage) {
         this.damage = damage;
+    }
+
+    public void takeDamage(double damage) {
+        this.healthPoints -= damage;
     }
 
     public String getName() {
@@ -47,6 +34,14 @@ public abstract class Human implements Combatant{
         this.name = name;
     }
 
+    public double getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(double healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
     public Weapon getWeapon() {
         return weapon;
     }
@@ -55,9 +50,9 @@ public abstract class Human implements Combatant{
         this.weapon = weapon;
     }
 
-
-    public void takeDamage(double damage) {
-        this.healthPoints -= damage;
+    public void setAge(int age) {
+        this.age = age;
     }
+
 
 }

@@ -1,15 +1,14 @@
-package mediator;
+package composite;
 
 import composite.abstractions.Unit;
 import factories.CoalitionBuilder;
-import visitor.ElementInterface;
 
 import java.util.List;
-import java.util.Map;
 
 public class Coalition {
 
     private List<Unit> armies;
+
     public Coalition() {
         CoalitionBuilder coalitionBuilder = new CoalitionBuilder();
         this.armies = coalitionBuilder.createCoalition();

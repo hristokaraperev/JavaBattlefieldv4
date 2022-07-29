@@ -1,9 +1,9 @@
 import combatants.humans.General;
 import composite.Army;
-import mediator.Coalition;
+import composite.Coalition;
 import visitor.BattleLine;
 
-public class Battle implements Runnable{
+public class Battle implements Runnable {
     @Override
     public void run() {
         Coalition good = new Coalition();
@@ -22,7 +22,7 @@ public class Battle implements Runnable{
 
     }
 
-    private void battle(Coalition attacker, Coalition defender, BattleLine battleLine){
+    private void battle(Coalition attacker, Coalition defender, BattleLine battleLine) {
 
         while (true) {
             if (battleLine.visit(attacker, defender)) break;

@@ -2,26 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28662871-11dd-4d43-9145-6d85a43fe012" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitor/BattleLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitor/ElementInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Combatant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Combatant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/humans/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/General.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/combatants/humans/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Melee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/AirMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/machines/AirMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/LandMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/machines/LandMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composite/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Army.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composite/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/abstractions/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/abstractions/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/factories/HumanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/HumanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/factories/MachineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/MachineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mediator/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mediator/Coalition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factories/WeaponFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/WeaponFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globals/WeaponMaps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediator/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Coalition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitor/BattleLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitor/BattleLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitor/ElementInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +52,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
   <component name="RunManager">

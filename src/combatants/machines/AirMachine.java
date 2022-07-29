@@ -5,6 +5,6 @@ import combatants.abstractions.Machine;
 
 public class AirMachine extends Machine {
     @Override
-    public void isFighting(Combatant attacker){
+    public void isFighting(Combatant attacker) {
     }
 }

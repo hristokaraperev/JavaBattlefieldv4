@@ -5,6 +5,18 @@ public abstract class Weapon {
     int durability;
     String name;
 
+    public void updateDurability() {
+        this.durability--;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public double getDamage() {
         return damage;
     }
@@ -21,15 +33,5 @@ public abstract class Weapon {
         this.durability = durability;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void updateDurability() {
-        this.durability--;
-    }
 }

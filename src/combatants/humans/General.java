@@ -6,6 +6,11 @@ import combatants.abstractions.Human;
 public class General extends Human {
     private int experience;
 
+    @Override
+    public void isFighting(Combatant attacker) {
+        this.takeDamage(((Human) attacker).getDamage());
+    }
+
     public int getExperience() {
         return experience;
     }
@@ -14,8 +19,5 @@ public class General extends Human {
         this.experience = experience;
     }
 
-    @Override
-    public void isFighting(Combatant attacker) {
-        this.takeDamage(((Human) attacker).getDamage());
-    }
+
 }

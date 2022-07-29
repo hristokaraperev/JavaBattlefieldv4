@@ -5,7 +5,9 @@ import composite.Army;
 import composite.Brigade;
 import composite.abstractions.Unit;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class CoalitionBuilder {
 
@@ -13,7 +15,8 @@ public class CoalitionBuilder {
     private static final int BRIGADES_PER_ARMY = 10;
     private static final int SOLDIERS_PER_BRIGADE = 100;
 
-    public CoalitionBuilder(){};
+    public CoalitionBuilder() {
+    }
 
     public List<Unit> createCoalition() {
         HumanFactory humanFactory = new HumanFactory();

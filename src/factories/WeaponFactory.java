@@ -1,6 +1,5 @@
 package factories;
 
-import globals.WeaponMaps;
 import weapons.MeleeWeapon;
 import weapons.RangedWeapon;
 import weapons.abstractions.Weapon;
@@ -15,9 +14,7 @@ public class WeaponFactory {
     public final Map<String, Integer> weaponDamageValues = new HashMap<>();
     public final Map<String, Integer> weaponDurabilityValues = new HashMap<>();
 
-    public WeaponFactory(){};
-
-    public Weapon createWeapon(String type) {
+    public WeaponFactory() {
         weaponDamageValues.put("Knife", 15);
         weaponDamageValues.put("Baton", 10);
         weaponDamageValues.put("Axe", 25);
@@ -37,35 +34,14 @@ public class WeaponFactory {
         weaponDurabilityValues.put("Sniper", 20);
         weaponDurabilityValues.put("LAND", 10);
         weaponDurabilityValues.put("AIR", 10);
-
-        if (type == null) {
-            return null;
-        }
-        WeaponMaps weaponMaps = new WeaponMaps();
-        switch (type.toUpperCase()) {
-            case "MELEE":
-                Weapon meleeWeapon = new MeleeWeapon();
-                meleeWeapon.setName(setMeleeWeaponName());
-                meleeWeapon.setDamage(weaponMaps.weaponDamageValues.get(meleeWeapon.getName()));
-                meleeWeapon.setDurability(weaponMaps.weaponDurabilityValues.get(meleeWeapon.getName()));
-                return meleeWeapon;
-            case "RANGED":
-                Weapon rangedWeapon = new RangedWeapon();
-                rangedWeapon.setName(setRangedWeaponName());
-                rangedWeapon.setDamage(weaponMaps.weaponDamageValues.get(rangedWeapon.getName()));
-                rangedWeapon.setDurability(weaponMaps.weaponDurabilityValues.get(rangedWeapon.getName()));
-                return rangedWeapon;
-            default:
-                return null;
-        }
     }
 
     private static String setRangedWeaponName() {
         File file = new File("resources/RangedWeapons");
-        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)){
+        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
             StringBuffer sb = new StringBuffer();
             String line;
-            while ((line = br.readLine()) !=  null) {
+            while ((line = br.readLine()) != null) {
                 sb.append(line);
                 sb.append(" ");
             }
@@ -85,10 +61,10 @@ public class WeaponFactory {
 
     private static String setMeleeWeaponName() {
         File file = new File("resources/MeleeWeapons");
-        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)){
+        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
             StringBuffer sb = new StringBuffer();
             String line;
-            while ((line = br.readLine()) !=  null) {
+            while ((line = br.readLine()) != null) {
                 sb.append(line);
                 sb.append(" ");
             }
@@ -104,5 +80,29 @@ public class WeaponFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public Weapon createWeapon(String type) {
+
+
+        if (type == null) {
+            return null;
+        }
+        switch (type.toUpperCase()) {
+            case "MELEE":
+                Weapon meleeWeapon = new MeleeWeapon();
+                meleeWeapon.setName(setMeleeWeaponName());
+                meleeWeapon.setDamage(weaponDamageValues.get(meleeWeapon.getName()));
+                meleeWeapon.setDurability(weaponDurabilityValues.get(meleeWeapon.getName()));
+                return meleeWeapon;
+            case "RANGED":
+                Weapon rangedWeapon = new RangedWeapon();
+                rangedWeapon.setName(setRangedWeaponName());
+                rangedWeapon.setDamage(weaponDamageValues.get(rangedWeapon.getName()));
+                rangedWeapon.setDurability(weaponDurabilityValues.get(rangedWeapon.getName()));
+                return rangedWeapon;
+            default:
+                return null;
+        }
     }
 }

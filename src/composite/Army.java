@@ -10,8 +10,6 @@ import java.util.List;
 import java.util.Random;
 
 public class Army extends Unit {
-    // this class will hold the elements of the composition
-    // and will implement the operations in the unit component
     private int initialArmyCapacity = 0;
     private int currentArmySize = 0;
     private int defendingBrigadesCasualties = 0;
@@ -20,46 +18,13 @@ public class Army extends Unit {
     private List<Unit> brigades;
     private double armyMorale = 1;
 
-    public int getCurrentArmySize() {
-        return currentArmySize;
-    }
-
-    public void setCurrentArmySize(int currentArmySize) {
-        this.currentArmySize = currentArmySize;
-    }
-
-    public int getInitialArmyCapacity() {
-        return initialArmyCapacity;
-    }
-
-    public void setInitialArmyCapacity(int initialArmyCapacity) {
-        this.initialArmyCapacity = initialArmyCapacity;
-    }
-
-    public List<Unit> getBrigades() {
-        return brigades;
-    }
-    public Combatant getGeneral() {
-        return general;
-    }
-
-    public void setBrigades(List<Unit> brigades) {
-        this.brigades = brigades;
-    }
-    public void setGeneral(Combatant general) {
-        this.general = general;
-    }
-    public int getGeneralExperience(){
-        return ((General) general).getExperience();
-    }
-
     @Override
     public int isGettingEngagedBy(Unit attackerArmy, Combatant defendingArmyGeneral) {
-        if (((Army)attackerArmy).getBrigades().isEmpty() || brigades.isEmpty()) {
+        if (((Army) attackerArmy).getBrigades().isEmpty() || brigades.isEmpty()) {
             return 0;
         }
 
-        if ((((Human)((Army)attackerArmy).getGeneral()).getHealthPoints() <= 0) || ((Human)defendingArmyGeneral).getHealthPoints() <= 0) {
+        if ((((Human) ((Army) attackerArmy).getGeneral()).getHealthPoints() <= 0) || ((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
             return 0;
         }
 
@@ -72,25 +37,25 @@ public class Army extends Unit {
 
         while (defendingBrigadesIterator.hasNext()) {
             Unit nextBrigade = defendingBrigadesIterator.next();
-            if (((Brigade)nextBrigade).getHumans().isEmpty()) {
+            if (((Brigade) nextBrigade).getHumans().isEmpty()) {
                 continue;
             }
             int indexOfAttackingBrigade = rng.nextInt(attackingBrigades.size());
 
             defendingBrigadesCasualties += nextBrigade.isGettingEngagedBy(attackingBrigades.get(indexOfAttackingBrigade), defendingArmyGeneral);
-            if (((Human)defendingArmyGeneral).getHealthPoints() <= 0) {
+            if (((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
                 return 0;
             }
         }
 
-        List<Unit> updatedDefendingBrigades = brigades.stream().filter(unit -> !((Brigade)unit).getHumans().isEmpty()).toList();
+        List<Unit> updatedDefendingBrigades = brigades.stream().filter(unit -> !((Brigade) unit).getHumans().isEmpty()).toList();
 
         totalArmyCasualties += defendingBrigadesCasualties;
 
         currentArmySize = 0;
 
         for (Unit brigade : updatedDefendingBrigades) {
-            currentArmySize += ((Brigade)brigade).getHumans().size();
+            currentArmySize += ((Brigade) brigade).getHumans().size();
         }
 
         if ((initialArmyCapacity - currentArmySize) > (initialArmyCapacity * 0.2)) {
@@ -108,41 +73,36 @@ public class Army extends Unit {
         brigades = updatedDefendingBrigades;
 
         return totalArmyCasualties;
-
-//        if (((Army)attackerArmy).getBrigades().isEmpty()){
-//            return totalCasualties;
-//        }
-//        if (brigades.isEmpty()) {
-//            return totalCasualties;
-//        }
-//        Random rng = new Random();
-//
-//        Iterator<Unit> iterator = brigades.iterator();
-//
-//        casualties = 0;
-//        while (iterator.hasNext()) {
-//            Unit nextBrigade = iterator.next();
-//            if (((Brigade)nextBrigade).getHumans().isEmpty()) {
-//                continue;
-//            }
-//
-//
-//
-//            casualties += nextBrigade.isGettingEngagedBy(((Army) attackerArmy).getBrigades().get(rng.nextInt(((Army) attackerArmy).getBrigades().size())));
-//            totalCasualties += casualties;
-//            while (casualties >= 50) {
-//                armyMorale = armyMorale - (armyMorale * 0.05);
-//                casualties = casualties - 50;
-//            }
-//        }
-//
-//        List<Unit> updatedBrigades = brigades.stream().filter(unit -> ((Brigade) unit).getHumans().size() > 0).toList();
-//        brigades = updatedBrigades;
-//        return totalCasualties;
     }
+
+
+    public List<Unit> getBrigades() {
+        return brigades;
+    }
+
+    public void setBrigades(List<Unit> brigades) {
+        this.brigades = brigades;
+    }
+
+    public Combatant getGeneral() {
+        return general;
+    }
+
+    public void setGeneral(Combatant general) {
+        this.general = general;
+    }
+
+    public void setInitialArmyCapacity(int initialArmyCapacity) {
+        this.initialArmyCapacity = initialArmyCapacity;
+    }
+
+    public int getGeneralExperience() {
+        return ((General) general).getExperience();
+    }
+
 
     @Override
     public String toString() {
-        return "Army - General: " + ((Human)general).getName() + " HP: " + ((Human)general).getHealthPoints() + " Soldiers left: " + currentArmySize;
+        return "Army - General: " + ((Human) general).getName() + " HP: " + ((Human) general).getHealthPoints() + " Soldiers left: " + currentArmySize;
     }
 }

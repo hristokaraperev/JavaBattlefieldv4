@@ -5,11 +5,10 @@ import combatants.abstractions.Human;
 import combatants.abstractions.Machine;
 
 public class Melee extends Human {
-
     @Override
     public void isFighting(Combatant attacker) {
         if (attacker.getClass().getSuperclass() == Machine.class) {
-            this.takeDamage(((Machine)attacker).getDamage());
+            this.takeDamage(((Machine) attacker).getDamage());
         } else {
             this.takeDamage(((Human) attacker).getDamage());
         }

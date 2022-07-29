@@ -2,6 +2,7 @@ package composite;
 
 import combatants.abstractions.Combatant;
 import combatants.abstractions.Human;
+import combatants.abstractions.Machine;
 import composite.abstractions.Unit;
 
 import java.util.Iterator;
@@ -11,30 +12,13 @@ import java.util.Random;
 public class Brigade extends Unit {
     // building block of the army
     // it will define the behaviour of the elements in the composition
-    private Combatant warMachine;
+    private Machine warMachine;
     private List<Combatant> humans;
-
-    public Combatant getWarMachine() {
-        return warMachine;
-    }
-
-    public void setWarMachine(Combatant warMachine) {
-        this.warMachine = warMachine;
-    }
-
-    public List<Combatant> getHumans() {
-        return humans;
-    }
-
-    public void setHumans(List<Combatant> humans) {
-        this.humans = humans;
-    }
-
 
 
     @Override
     public int isGettingEngagedBy(Unit unit, Combatant defendingArmyGeneral) {
-        if (((Brigade)unit).getHumans().isEmpty() || humans.isEmpty()) {
+        if (((Brigade) unit).getHumans().isEmpty() || humans.isEmpty()) {
             return 0;
         }
         Random rng = new Random();
@@ -54,7 +38,7 @@ public class Brigade extends Unit {
 
             if (rng.nextInt(101) < 1) {
                 defendingArmyGeneral.isFighting(attackingHumans.get(indexOfAttackingHuman));
-                if (((Human)defendingArmyGeneral).getHealthPoints() <= 0) {
+                if (((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
                     return 0;
                 }
                 continue;
@@ -72,4 +56,19 @@ public class Brigade extends Unit {
 
         return defendingCasualties;
     }
+
+
+    public List<Combatant> getHumans() {
+        return humans;
+    }
+
+    public void setHumans(List<Combatant> humans) {
+        this.humans = humans;
+    }
+
+    public void setWarMachine(Machine warMachine) {
+        this.warMachine = warMachine;
+    }
+
+
 }

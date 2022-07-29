@@ -16,10 +16,41 @@ import java.util.StringTokenizer;
 
 public class HumanFactory {
 
-    public HumanFactory(){};
+    private static int setGeneralExperience() {
+        Random rng = new Random();
+        return rng.nextInt(50, 101);
+    }
+
+    private static int setCombatantAge() {
+        Random rng = new Random();
+        return rng.nextInt(18, 40);
+    }
+
+    private static String setCombatantName() {
+        File file = new File("resources/SoldierNames");
+        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
+            StringBuffer sb = new StringBuffer();
+            String line;
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+                sb.append(" ");
+            }
+            StringTokenizer st = new StringTokenizer(sb.toString(), " ");
+            List<String> names = new ArrayList<>();
+            while (st.hasMoreTokens()) {
+                names.add(st.nextToken());
+            }
+            Random rng = new Random();
+            int indexOfName = rng.nextInt(0, names.size());
+            return names.get(indexOfName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public Combatant createHuman(String type) {
-        if (type == null){
+        if (type == null) {
             return null;
         }
         WeaponFactory weaponFactory = new WeaponFactory();
@@ -52,38 +83,5 @@ public class HumanFactory {
                 return null;
 
         }
-    }
-
-    private static int setGeneralExperience(){
-        Random rng = new Random();
-        return rng.nextInt(50, 101);
-    }
-
-    private static int setCombatantAge(){
-        Random rng = new Random();
-        return rng.nextInt(18, 40);
-    }
-
-    private static String setCombatantName() {
-        File file = new File("resources/SoldierNames");
-        try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)){
-            StringBuffer sb = new StringBuffer();
-            String line;
-            while ((line = br.readLine()) !=  null) {
-                sb.append(line);
-                sb.append(" ");
-            }
-            StringTokenizer st = new StringTokenizer(sb.toString(), " ");
-            List<String> names = new ArrayList<>();
-            while (st.hasMoreTokens()) {
-                names.add(st.nextToken());
-            }
-            Random rng = new Random();
-            int indexOfName = rng.nextInt(0, names.size());
-            return names.get(indexOfName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }
