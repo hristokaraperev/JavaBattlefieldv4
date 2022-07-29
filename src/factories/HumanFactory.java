@@ -14,24 +14,7 @@ import java.util.*;
 public class HumanFactory {
 
     // responsible for creating individual human entities
-    public Combatant createHuman(String type) {
-        int soldierHealth = 0;
-        int generalHealth = 0;
-        Scanner input = new Scanner(System.in);
-
-        while (soldierHealth == 0 || generalHealth == 0 ){
-            try {
-                System.out.print("How much health should the soldiers have: ");
-                soldierHealth = Integer.parseInt(input.nextLine());
-                System.out.print("How much health should the general have: ");
-                generalHealth = Integer.parseInt(input.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input, try again!");
-                System.out.println();
-            }
-        }
-
-        input.close();
+    public Combatant createHuman(String type, double soldierHealth, double generalHealth) {
 
         if (type == null) {
             return null;

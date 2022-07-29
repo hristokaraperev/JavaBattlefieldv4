@@ -19,6 +19,7 @@ public class BattleLine {
             return true;
         }
 
+
         if (attacker.getArmies().stream().anyMatch(unit -> ((Human) ((Army) unit).getGeneral()).getHealthPoints() <= 0) ||
                 defender.getArmies().stream().anyMatch(unit -> ((Human) ((Army) unit).getGeneral()).getHealthPoints() <= 0)) {
             return true;
@@ -41,7 +42,9 @@ public class BattleLine {
 
             nextArmy.isGettingEngagedBy(attackingArmies.get(indexOfAttackingArmy), ((Army) nextArmy).getGeneral());
 
-            if (((Human) ((Army) nextArmy).getGeneral()).getHealthPoints() <= 0) {
+            if (((Army) nextArmy).getGeneral() == null) {
+                List<Unit> updatedArmies = defender.getArmies().stream().filter(unit -> ((Army)unit).getGeneral() != null).toList();
+                defender.setArmies(updatedArmies);
                 return true;
             }
         }

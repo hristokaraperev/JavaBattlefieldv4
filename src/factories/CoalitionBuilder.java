@@ -16,11 +16,15 @@ public class CoalitionBuilder {
     private int ARMIES_PER_COALITION = 0;
     private int BRIGADES_PER_ARMY = 0;
     private int SOLDIERS_PER_BRIGADE = 0;
+    private double HEALTH_PER_SOLDIER = 0;
+    private double HEALTH_PER_GENERAL = 0;
 
-    public CoalitionBuilder(int armies, int brigades, int humans) {
+    public CoalitionBuilder(int armies, int brigades, int humans, double soldierHealth, double generalHealth) {
         this.ARMIES_PER_COALITION = armies;
         this.BRIGADES_PER_ARMY = brigades;
         this.SOLDIERS_PER_BRIGADE = humans;
+        this.HEALTH_PER_SOLDIER = soldierHealth;
+        this.HEALTH_PER_GENERAL = generalHealth;
     }
 
     // responsible for building the coalition game unit
@@ -42,7 +46,7 @@ public class CoalitionBuilder {
                 machines.add(machine);
                 List<Combatant> soldiers = new ArrayList<>();
                 for (int k = 0; k < SOLDIERS_PER_BRIGADE; k++) {
-                    Combatant soldier = humanFactory.createHuman(humanTypes[rng.nextInt(humanTypes.length)]);
+                    Combatant soldier = humanFactory.createHuman(humanTypes[rng.nextInt(humanTypes.length)], HEALTH_PER_SOLDIER, HEALTH_PER_GENERAL);
                     soldiers.add(soldier);
                 }
                 brigade.setHumans(soldiers);
@@ -50,7 +54,7 @@ public class CoalitionBuilder {
             }
             army.setBrigades(brigades);
             army.setMachines(machines);
-            army.setGeneral(humanFactory.createHuman("GENERAL"));
+            army.setGeneral(humanFactory.createHuman("GENERAL", HEALTH_PER_SOLDIER, HEALTH_PER_GENERAL));
             army.setInitialArmyCapacity(BRIGADES_PER_ARMY * SOLDIERS_PER_BRIGADE);
             armies.add(army);
         }

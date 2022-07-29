@@ -55,6 +55,9 @@ public class Army extends Unit {
 
             defendingBrigadesCasualties += nextBrigade.isGettingEngagedBy(attackingBrigades.get(indexOfAttackingBrigade), defendingArmyGeneral);
             if (((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
+                this.general = null;
+            }
+            if (this.general == null) {
                 return 0;
             }
         }

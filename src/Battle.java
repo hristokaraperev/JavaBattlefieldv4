@@ -13,10 +13,12 @@ public class Battle implements Runnable {
         int armies = 0;
         int brigades = 0;
         int humans = 0;
+        int soldierHealth = 0;
+        int generalHealth = 0;
 
         Scanner input = new Scanner(System.in);
 
-        while (armies == 0 || brigades == 0 || humans == 0){
+        while (armies == 0 || brigades == 0 || humans == 0 || soldierHealth == 0 || generalHealth == 0){
             try {
                 System.out.print("Enter number of armies per coalition: ");
                 armies = Integer.parseInt(input.nextLine());
@@ -24,6 +26,10 @@ public class Battle implements Runnable {
                 brigades = Integer.parseInt(input.nextLine());
                 System.out.print("Enter number of humans per brigade: ");
                 humans = Integer.parseInt(input.nextLine());
+                System.out.print("How much health should the soldiers have: ");
+                soldierHealth = Integer.parseInt(input.nextLine());
+                System.out.print("How much health should the general have: ");
+                generalHealth = Integer.parseInt(input.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input, try again!");
                 System.out.println();
@@ -32,8 +38,8 @@ public class Battle implements Runnable {
 
         input.close();
 
-        Coalition good = new Coalition(armies, brigades, humans);
-        Coalition bad = new Coalition(armies, brigades, humans);
+        Coalition good = new Coalition(armies, brigades, humans, soldierHealth, generalHealth, "GOOD");
+        Coalition bad = new Coalition(armies, brigades, humans, soldierHealth, generalHealth, "EVIL");
 
 
         // check which army has more war Knowledge
@@ -54,8 +60,8 @@ public class Battle implements Runnable {
 
         // game loop with end conditions
         while (true) {
-            if (battleLine.visit(attacker, defender)) break;
-            if (battleLine.visit(defender, attacker)) break;
+            if (battleLine.visit(attacker, defender) && defender.getArmies().isEmpty()) break;
+            if (battleLine.visit(defender, attacker) && attacker.getArmies().isEmpty()) break;
 
         }
 
