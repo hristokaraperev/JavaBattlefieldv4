@@ -27,5 +27,7 @@ public class ArmySoldiersByWeaponType implements Util{
         for (Combatant human : filteredHumans) {
             System.out.println(human);
         }
+
+        input.close();
     }
 }

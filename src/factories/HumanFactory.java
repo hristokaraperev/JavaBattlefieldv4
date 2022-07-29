@@ -9,15 +9,30 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class HumanFactory {
 
     // responsible for creating individual human entities
     public Combatant createHuman(String type) {
+        int soldierHealth = 0;
+        int generalHealth = 0;
+        Scanner input = new Scanner(System.in);
+
+        while (soldierHealth == 0 || generalHealth == 0 ){
+            try {
+                System.out.print("How much health should the soldiers have: ");
+                soldierHealth = Integer.parseInt(input.nextLine());
+                System.out.print("How much health should the general have: ");
+                generalHealth = Integer.parseInt(input.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, try again!");
+                System.out.println();
+            }
+        }
+
+        input.close();
+
         if (type == null) {
             return null;
         }
@@ -27,7 +42,7 @@ public class HumanFactory {
                 Melee melee = new Melee();
                 melee.setName(setCombatantName());
                 melee.setAge(setCombatantAge());
-                melee.setHealthPoints(100);
+                melee.setHealthPoints(soldierHealth);
                 melee.setWeapon(weaponFactory.createWeapon(type));
                 melee.setDamage(melee.getWeapon().getDamage());
                 return melee;
@@ -35,7 +50,7 @@ public class HumanFactory {
                 Ranged ranged = new Ranged();
                 ranged.setName(setCombatantName());
                 ranged.setAge(setCombatantAge());
-                ranged.setHealthPoints(100);
+                ranged.setHealthPoints(soldierHealth);
                 ranged.setWeapon(weaponFactory.createWeapon(type));
                 ranged.setDamage(ranged.getWeapon().getDamage());
                 return ranged;
@@ -43,7 +58,7 @@ public class HumanFactory {
                 General general = new General();
                 general.setName(setCombatantName());
                 general.setAge(setCombatantAge());
-                general.setHealthPoints(5000);
+                general.setHealthPoints(generalHealth);
                 general.setExperience(setGeneralExperience());
                 general.setWeapon(null);
                 return general;

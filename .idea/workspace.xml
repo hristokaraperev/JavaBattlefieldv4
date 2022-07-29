@@ -3,22 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="28662871-11dd-4d43-9145-6d85a43fe012" name="Changes" comment="cleaned up the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/General.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Melee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/AirMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/machines/AirMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/LandMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/machines/LandMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Army.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/Coalition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/abstractions/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/composite/abstractions/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/factories/HumanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/HumanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/WeaponFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/WeaponFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitor/BattleLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitor/BattleLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ArmySoldiersByWeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ArmySoldiersByWeaponType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HumansAboveAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HumansAboveAge.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,26 +90,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cleaned up the code" />
     <option name="LAST_COMMIT_MESSAGE" value="cleaned up the code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Battle.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Battle.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Battle.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

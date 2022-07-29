@@ -32,5 +32,6 @@ public class HumansAboveAge implements Util{
             this.sort(army);
         }
 
+        input.close();
     }
 }
