@@ -22,7 +22,7 @@ public class MachineFactory {
                 landMachine.setDamage(weaponMaps.weaponDamageValues.get(type));
                 landMachine.setDurability(weaponMaps.weaponDurabilityValues.get(type));
                 return landMachine;
-            case "RANGED":
+            case "AIR":
                 Machine airMachine = new AirMachine();
                 airMachine.setName(type);
                 airMachine.setDamage(weaponMaps.weaponDamageValues.get(type));

@@ -1,5 +1,6 @@
 package combatants.humans;
 
+import combatants.abstractions.Combatant;
 import combatants.abstractions.Human;
 
 public class General extends Human {
@@ -11,5 +12,10 @@ public class General extends Human {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    @Override
+    public void isFighting(Combatant attacker) {
+        this.takeDamage(((Human) attacker).getDamage());
     }
 }

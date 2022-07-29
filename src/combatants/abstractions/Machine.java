@@ -14,7 +14,11 @@ public abstract class Machine implements Combatant{
     }
 
     public double getDamage() {
-        return damage;
+        if (durability > 0) {
+            durability--;
+            return damage;
+        }
+        return 0;
     }
 
     public void setDamage(double damage) {
@@ -28,4 +32,5 @@ public abstract class Machine implements Combatant{
     public void setName(String name) {
         this.name = name;
     }
+
 }

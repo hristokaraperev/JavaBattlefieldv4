@@ -1,9 +1,11 @@
+import composite.Army;
 import mediator.Coalition;
+import visitor.BattleLine;
 
 public class Main {
     public static void main(String[] args) {
-        Coalition good = new Coalition();
-        System.out.println(good);
+        Battle battle = new Battle();
+        battle.run();
     }
 
 }

@@ -26,7 +26,13 @@ public abstract class Human implements Combatant{
     }
 
     public double getDamage() {
-        return damage;
+        if (weapon.getDurability() > 0) {
+            weapon.updateDurability();
+            return damage;
+        } else {
+            return damage * 0.2;
+        }
+
     }
 
     public void setDamage(double damage) {
@@ -48,4 +54,10 @@ public abstract class Human implements Combatant{
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
+
+
+    public void takeDamage(double damage) {
+        this.healthPoints -= damage;
+    }
+
 }
