@@ -12,13 +12,17 @@ import java.util.Random;
 
 public class CoalitionBuilder {
 
-    private static final int ARMIES_PER_COALITION = 5;
-    private static final int BRIGADES_PER_ARMY = 10;
-    private static final int SOLDIERS_PER_BRIGADE = 100;
+    private int ARMIES_PER_COALITION = 0;
+    private int BRIGADES_PER_ARMY = 0;
+    private int SOLDIERS_PER_BRIGADE = 0;
 
-    public CoalitionBuilder() {
+    public CoalitionBuilder(int armies, int brigades, int humans) {
+        this.ARMIES_PER_COALITION = armies;
+        this.BRIGADES_PER_ARMY = brigades;
+        this.SOLDIERS_PER_BRIGADE = humans;
     }
 
+    // responsible for building the coalition game unit
     public List<Unit> createCoalition() {
         HumanFactory humanFactory = new HumanFactory();
         MachineFactory machineFactory = new MachineFactory();

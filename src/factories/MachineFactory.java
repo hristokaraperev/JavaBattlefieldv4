@@ -6,6 +6,7 @@ import combatants.machines.LandMachine;
 
 public class MachineFactory {
 
+    // responsible for creating war machines
     public Machine createMachine(String type) {
         if (type == null) {
             return null;

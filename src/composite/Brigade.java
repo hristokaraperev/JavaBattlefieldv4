@@ -11,13 +11,15 @@ import java.util.Random;
 
 public class Brigade extends Unit {
     // building block of the army
-    // it will define the behaviour of the elements in the composition
     private Machine warMachine;
     private List<Combatant> humans;
 
-
+    // similar to coalition and army loop
+    // checks for empty lists to prevent errors
+    // during gameplay
     @Override
     public int isGettingEngagedBy(Unit unit, Combatant defendingArmyGeneral) {
+        // preventive check
         if (((Brigade) unit).getHumans().isEmpty() || humans.isEmpty()) {
             return 0;
         }
@@ -29,6 +31,7 @@ public class Brigade extends Unit {
 
         Iterator<Combatant> defendingHumansIterator = humans.iterator();
 
+        // iterates through humans in a brigade
         while (defendingHumansIterator.hasNext()) {
             Combatant nextCombatant = defendingHumansIterator.next();
             if (!(((Human) nextCombatant).getHealthPoints() > 0)) {
@@ -47,7 +50,9 @@ public class Brigade extends Unit {
             nextCombatant.isFighting(attackingHumans.get(indexOfAttackingHuman));
         }
 
-
+        // updates brigades in the army
+        // and calculates army casualties to be passed to
+        // army loop
         List<Combatant> updatedDefendingHumans = humans.stream().filter(combatant -> ((Human) combatant).getHealthPoints() > 0).toList();
 
         int defendingCasualties = humans.size() - updatedDefendingHumans.size();

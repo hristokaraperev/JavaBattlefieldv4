@@ -7,10 +7,11 @@ import java.util.List;
 
 public class Coalition {
 
+    // coalition game unit
     private List<Unit> armies;
 
-    public Coalition() {
-        CoalitionBuilder coalitionBuilder = new CoalitionBuilder();
+    public Coalition(int armies, int brigades, int humans) {
+        CoalitionBuilder coalitionBuilder = new CoalitionBuilder(armies, brigades, humans);
         this.armies = coalitionBuilder.createCoalition();
     }
 

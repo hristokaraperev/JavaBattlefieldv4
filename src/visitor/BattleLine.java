@@ -10,8 +10,11 @@ import java.util.List;
 import java.util.Random;
 
 public class BattleLine {
-
+    // responsible for iterating through armies
+    // matching one army to another
     public boolean visit(Coalition attacker, Coalition defender) {
+
+        // checks if end conditions are fulfilled
         if (attacker.getArmies().isEmpty() || defender.getArmies().isEmpty()) {
             return true;
         }
@@ -27,6 +30,7 @@ public class BattleLine {
 
         Iterator<Unit> defenderArmiesIterator = defender.getArmies().iterator();
 
+        // iteration loop
         while (defenderArmiesIterator.hasNext()) {
             Unit nextArmy = defenderArmiesIterator.next();
             if (((Army) nextArmy).getBrigades().isEmpty()) {
@@ -42,6 +46,7 @@ public class BattleLine {
             }
         }
 
+        // updates defender armies in preparation for next battle phase
         List<Unit> updatedDefenderArmies = defender.getArmies().stream().filter(unit -> !((Army) unit).getBrigades().isEmpty()).toList();
 
         defender.setArmies(updatedDefenderArmies);

@@ -16,6 +16,43 @@ import java.util.StringTokenizer;
 
 public class HumanFactory {
 
+    // responsible for creating individual human entities
+    public Combatant createHuman(String type) {
+        if (type == null) {
+            return null;
+        }
+        WeaponFactory weaponFactory = new WeaponFactory();
+        switch (type.toUpperCase()) {
+            case "MELEE":
+                Melee melee = new Melee();
+                melee.setName(setCombatantName());
+                melee.setAge(setCombatantAge());
+                melee.setHealthPoints(100);
+                melee.setWeapon(weaponFactory.createWeapon(type));
+                melee.setDamage(melee.getWeapon().getDamage());
+                return melee;
+            case "RANGED":
+                Ranged ranged = new Ranged();
+                ranged.setName(setCombatantName());
+                ranged.setAge(setCombatantAge());
+                ranged.setHealthPoints(100);
+                ranged.setWeapon(weaponFactory.createWeapon(type));
+                ranged.setDamage(ranged.getWeapon().getDamage());
+                return ranged;
+            case "GENERAL":
+                General general = new General();
+                general.setName(setCombatantName());
+                general.setAge(setCombatantAge());
+                general.setHealthPoints(5000);
+                general.setExperience(setGeneralExperience());
+                general.setWeapon(null);
+                return general;
+            default:
+                return null;
+
+        }
+    }
+
     private static int setGeneralExperience() {
         Random rng = new Random();
         return rng.nextInt(50, 101);
@@ -49,39 +86,5 @@ public class HumanFactory {
         return null;
     }
 
-    public Combatant createHuman(String type) {
-        if (type == null) {
-            return null;
-        }
-        WeaponFactory weaponFactory = new WeaponFactory();
-        switch (type.toUpperCase()) {
-            case "MELEE":
-                Melee melee = new Melee();
-                melee.setName(setCombatantName());
-                melee.setAge(setCombatantAge());
-                melee.setHealthPoints(100);
-                melee.setWeapon(weaponFactory.createWeapon(type));
-                melee.setDamage(melee.getWeapon().getDamage());
-                return melee;
-            case "RANGED":
-                Ranged ranged = new Ranged();
-                ranged.setName(setCombatantName());
-                ranged.setAge(setCombatantAge());
-                ranged.setHealthPoints(100);
-                ranged.setWeapon(weaponFactory.createWeapon(type));
-                ranged.setDamage(ranged.getWeapon().getDamage());
-                return ranged;
-            case "GENERAL":
-                General general = new General();
-                general.setName(setCombatantName());
-                general.setAge(setCombatantAge());
-                general.setHealthPoints(2000);
-                general.setExperience(setGeneralExperience());
-                general.setWeapon(null);
-                return general;
-            default:
-                return null;
 
-        }
-    }
 }

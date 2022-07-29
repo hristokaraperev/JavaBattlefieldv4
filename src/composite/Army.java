@@ -23,8 +23,12 @@ public class Army extends Unit {
     private List<Machine> machines;
     private double armyMorale = 1;
 
+    // army loop
+    // checks for certain conditions to prevent errors during gameplay
     @Override
     public int isGettingEngagedBy(Unit attackerArmy, Combatant defendingArmyGeneral) {
+
+        // preventative checks
         if (((Army) attackerArmy).getBrigades().isEmpty() || brigades.isEmpty()) {
             return 0;
         }
@@ -40,6 +44,8 @@ public class Army extends Unit {
 
         Iterator<Unit> defendingBrigadesIterator = brigades.iterator();
 
+
+        // iterates through brigades in an army
         while (defendingBrigadesIterator.hasNext()) {
             Unit nextBrigade = defendingBrigadesIterator.next();
             if (((Brigade) nextBrigade).getHumans().isEmpty()) {
@@ -63,12 +69,19 @@ public class Army extends Unit {
             currentArmySize += ((Brigade) brigade).getHumans().size();
         }
 
+        // updates the morale of the armies
+
+        // this in particular is responsible for giving an army double damage
+        // in case the amount of troops has dropped to critical levels
         if ((initialArmyCapacity - currentArmySize) > (initialArmyCapacity * 0.2)) {
             if (rng.nextInt(101) < 50) {
                 armyMorale = armyMorale * 2;
             }
         }
 
+        // responsible for decreasing morale based on casualties incurred during battle
+        // also responsible for updating the damage to the soldiers based on
+        // the current morale value
         if (totalArmyCasualties != 0) {
             int moraleModifier = totalArmyCasualties / 50;
             armyMorale = armyMorale - (armyMorale * moraleModifier * 0.01);
@@ -78,6 +91,7 @@ public class Army extends Unit {
             defendingBrigadesCasualties = 0;
         }
 
+        // updates list of brigades
         brigades = updatedDefendingBrigades;
 
         return totalArmyCasualties;
@@ -124,6 +138,7 @@ public class Army extends Unit {
         return "Army - General: " + ((Human) general).getName() + " HP: " + healthPoints + " Soldiers left: " + currentArmySize;
     }
 
+    // used to print out an 
     public void printAllArmyWeapons() {
         System.out.println("GENERAL");
         System.out.println(general);

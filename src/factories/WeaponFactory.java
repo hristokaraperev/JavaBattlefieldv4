@@ -36,6 +36,33 @@ public class WeaponFactory {
         weaponDurabilityValues.put("AIR", 10);
     }
 
+
+    // responsible for creating weapons for humans and helps with the creation of war machines
+    // by providing public access to maps
+    public Weapon createWeapon(String type) {
+
+
+        if (type == null) {
+            return null;
+        }
+        switch (type.toUpperCase()) {
+            case "MELEE":
+                Weapon meleeWeapon = new MeleeWeapon();
+                meleeWeapon.setName(setMeleeWeaponName());
+                meleeWeapon.setDamage(weaponDamageValues.get(meleeWeapon.getName()));
+                meleeWeapon.setDurability(weaponDurabilityValues.get(meleeWeapon.getName()));
+                return meleeWeapon;
+            case "RANGED":
+                Weapon rangedWeapon = new RangedWeapon();
+                rangedWeapon.setName(setRangedWeaponName());
+                rangedWeapon.setDamage(weaponDamageValues.get(rangedWeapon.getName()));
+                rangedWeapon.setDurability(weaponDurabilityValues.get(rangedWeapon.getName()));
+                return rangedWeapon;
+            default:
+                return null;
+        }
+    }
+
     private static String setRangedWeaponName() {
         File file = new File("resources/RangedWeapons");
         try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
@@ -82,27 +109,5 @@ public class WeaponFactory {
         return null;
     }
 
-    public Weapon createWeapon(String type) {
 
-
-        if (type == null) {
-            return null;
-        }
-        switch (type.toUpperCase()) {
-            case "MELEE":
-                Weapon meleeWeapon = new MeleeWeapon();
-                meleeWeapon.setName(setMeleeWeaponName());
-                meleeWeapon.setDamage(weaponDamageValues.get(meleeWeapon.getName()));
-                meleeWeapon.setDurability(weaponDurabilityValues.get(meleeWeapon.getName()));
-                return meleeWeapon;
-            case "RANGED":
-                Weapon rangedWeapon = new RangedWeapon();
-                rangedWeapon.setName(setRangedWeaponName());
-                rangedWeapon.setDamage(weaponDamageValues.get(rangedWeapon.getName()));
-                rangedWeapon.setDurability(weaponDurabilityValues.get(rangedWeapon.getName()));
-                return rangedWeapon;
-            default:
-                return null;
-        }
-    }
 }
