@@ -6,6 +6,7 @@ import combatants.abstractions.Human;
 public class General extends Human {
     private int experience;
 
+    // function is called every time a combatant is about to be attacked
     @Override
     public void isFighting(Combatant attacker) {
         this.takeDamage(((Human) attacker).getDamage());

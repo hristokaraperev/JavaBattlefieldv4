@@ -1,10 +1,14 @@
 package combatants.abstractions;
 
-public abstract class Machine implements Combatant {
+// machine class implements combatant interface
+// so that it can attack other combatants
+public abstract class Machine implements Combatant{
     int durability;
     double damage;
     String name;
 
+    // function that is called every time a machine attacks
+    // to check whether the machine has depleted or not
     public double getDamage() {
         if (durability > 0) {
             durability--;

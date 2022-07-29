@@ -5,6 +5,7 @@ public abstract class Weapon {
     int durability;
     String name;
 
+    // function called every time a weapon is used
     public void updateDurability() {
         this.durability--;
     }

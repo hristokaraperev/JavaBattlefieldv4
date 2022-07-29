@@ -32,7 +32,7 @@ public class Army extends Unit {
         if (((Army) attackerArmy).getBrigades().isEmpty() || brigades.isEmpty()) {
             return 0;
         }
-
+        // preventative checks
         if ((((Human) ((Army) attackerArmy).getGeneral()).getHealthPoints() <= 0) || ((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
             return 0;
         }
@@ -61,6 +61,7 @@ public class Army extends Unit {
 
         List<Unit> updatedDefendingBrigades = brigades.stream().filter(unit -> !((Brigade) unit).getHumans().isEmpty()).toList();
 
+        // keeps track of casualties across army
         totalArmyCasualties += defendingBrigadesCasualties;
 
         currentArmySize = 0;
@@ -138,7 +139,7 @@ public class Army extends Unit {
         return "Army - General: " + ((Human) general).getName() + " HP: " + healthPoints + " Soldiers left: " + currentArmySize;
     }
 
-    // used to print out an 
+    // used to print out the general and every machine and combatant of an army
     public void printAllArmyWeapons() {
         System.out.println("GENERAL");
         System.out.println(general);

@@ -11,6 +11,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class WeaponFactory {
+
+    // maps referenced in weapon and machine creation
+    // public so that MachineFactory can have easy access
+    // to the values
     public final Map<String, Integer> weaponDamageValues = new HashMap<>();
     public final Map<String, Integer> weaponDurabilityValues = new HashMap<>();
 
@@ -63,6 +67,9 @@ public class WeaponFactory {
         }
     }
 
+    // function that takes a text file of weapon names
+    // and picks one at random to be assigned to the weapon
+    // based on weapon name, the weapon get its damage and durability values
     private static String setRangedWeaponName() {
         File file = new File("resources/RangedWeapons");
         try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
@@ -86,6 +93,10 @@ public class WeaponFactory {
         return null;
     }
 
+
+    // function that takes a text file of weapon names
+    // and picks one at random to be assigned to the weapon
+    // based on weapon name, the weapon get its damage and durability values
     private static String setMeleeWeaponName() {
         File file = new File("resources/MeleeWeapons");
         try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {

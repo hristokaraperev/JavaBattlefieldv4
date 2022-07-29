@@ -30,7 +30,7 @@ public class BattleLine {
 
         Iterator<Unit> defenderArmiesIterator = defender.getArmies().iterator();
 
-        // iteration loop
+        // iterates through armies and matches army to army
         while (defenderArmiesIterator.hasNext()) {
             Unit nextArmy = defenderArmiesIterator.next();
             if (((Army) nextArmy).getBrigades().isEmpty()) {

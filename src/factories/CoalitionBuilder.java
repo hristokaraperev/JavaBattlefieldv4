@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class CoalitionBuilder {
 
+    // variables that control the size of the coalition
     private int ARMIES_PER_COALITION = 0;
     private int BRIGADES_PER_ARMY = 0;
     private int SOLDIERS_PER_BRIGADE = 0;

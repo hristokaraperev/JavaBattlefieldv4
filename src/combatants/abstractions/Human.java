@@ -9,6 +9,8 @@ public abstract class Human implements Combatant {
     String name;
     Weapon weapon;
 
+    // function that is called every time a combatant attacks
+    // to check whether the weapon has depleted or not
     public double getDamage() {
         if (weapon.getDurability() > 0) {
             weapon.updateDurability();
@@ -21,6 +23,9 @@ public abstract class Human implements Combatant {
     public void setDamage(double damage) {
         this.damage = damage;
     }
+
+    // function used in army class to update the combatant's damage
+    // in accordance with the current army morale value
     public void updateDamage(double morale) {
         this.damage = this.damage * morale;
     }

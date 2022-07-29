@@ -23,6 +23,8 @@ public class Brigade extends Unit {
         if (((Brigade) unit).getHumans().isEmpty() || humans.isEmpty()) {
             return 0;
         }
+
+
         Random rng = new Random();
 
         humans.get(rng.nextInt(humans.size())).isFighting(((Brigade) unit).warMachine);

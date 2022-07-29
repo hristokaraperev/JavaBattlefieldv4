@@ -63,6 +63,9 @@ public class HumanFactory {
         return rng.nextInt(18, 40);
     }
 
+
+    // function that takes a text file of human names
+    // and picks one at random to be assigned to the human
     private static String setCombatantName() {
         File file = new File("resources/SoldierNames");
         try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
