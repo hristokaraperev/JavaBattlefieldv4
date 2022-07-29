@@ -7,6 +7,8 @@ import combatants.humans.General;
 import composite.abstractions.Unit;
 import utils.*;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -70,6 +72,9 @@ public class Army extends Unit {
         if (totalArmyCasualties != 0) {
             int moraleModifier = totalArmyCasualties / 50;
             armyMorale = armyMorale - (armyMorale * moraleModifier * 0.01);
+            for (Unit brigade : this.getBrigades()) {
+                ((Brigade)brigade).getHumans().forEach(combatant -> ((Human)combatant).updateDamage(armyMorale));
+            }
             defendingBrigadesCasualties = 0;
         }
 
@@ -113,7 +118,10 @@ public class Army extends Unit {
 
     @Override
     public String toString() {
-        return "Army - General: " + ((Human) general).getName() + " HP: " + ((Human) general).getHealthPoints() + " Soldiers left: " + currentArmySize;
+        String format = "0.00";
+        NumberFormat formatter = new DecimalFormat(format);
+        String healthPoints = formatter.format(((Human) general).getHealthPoints());
+        return "Army - General: " + ((Human) general).getName() + " HP: " + healthPoints + " Soldiers left: " + currentArmySize;
     }
 
     public void printAllArmyWeapons() {

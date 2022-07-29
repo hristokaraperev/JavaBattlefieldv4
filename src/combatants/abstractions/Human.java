@@ -21,6 +21,9 @@ public abstract class Human implements Combatant {
     public void setDamage(double damage) {
         this.damage = damage;
     }
+    public void updateDamage(double morale) {
+        this.damage = this.damage * morale;
+    }
 
     public void takeDamage(double damage) {
         this.healthPoints -= damage;

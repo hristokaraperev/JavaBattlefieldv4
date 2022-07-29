@@ -36,7 +36,7 @@ public class Brigade extends Unit {
             }
             int indexOfAttackingHuman = rng.nextInt(attackingHumans.size());
 
-            if (rng.nextInt(101) < 1) {
+            if (rng.nextInt(100) < 1) {
                 defendingArmyGeneral.isFighting(attackingHumans.get(indexOfAttackingHuman));
                 if (((Human) defendingArmyGeneral).getHealthPoints() <= 0) {
                     return 0;
