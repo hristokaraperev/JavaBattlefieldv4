@@ -2,56 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d38eeb1d-0836-435d-8ec3-50b15185043b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JavaBattlefieldApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combatants/humans/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combatants/humans/WeaponCarrier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combatants/machines/Air.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combatants/machines/Land.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combatants/machines/Machine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/globals/GlobalVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/HumanNames" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/MeleeWeapons" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/RangedWeapons" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/units/Army.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/units/Brigade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/units/Coalition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/units/CoalitionBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/AllArmySoldiersByWeaponType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/AllSoldiersOverSpecificAge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weapons/Weapon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/models.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/utils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/SoldierNames" beforeDir="false" afterPath="$PROJECT_DIR$/resources/HumanNames" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Combatant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/abstractions/Machine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/General.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Melee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/AirMachine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/combatants/machines/LandMachine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Army.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Brigade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/Coalition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composite/abstractions/Unit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/CoalitionBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/HumanFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/MachineFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/WeaponFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ArmySoldiersByWeaponType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/AverageArmyAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AverageArmyAge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HumansAboveAge.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OverallArmyDamage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/OverallArmyDamage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OverallArmyDurability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/OverallArmyDurability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/SortByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/SortByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/SortByTypeAndName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/SortByTypeAndName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitor/BattleLine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapons/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/MeleeWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapons/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapons/RangedWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapons/abstractions/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaBattlefieldApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/JavaBattlefieldApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/humans/General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/humans/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/humans/Melee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/Ranged.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/humans/Ranged.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/humans/WeaponCarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/humans/WeaponCarrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/machines/Air.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/machines/Air.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/machines/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/machines/Land.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combatants/machines/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/combatants/machines/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globals/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/globals/GlobalVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/HumanNames" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/resources/HumanNames" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/MeleeWeapons" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/resources/MeleeWeapons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/RangedWeapons" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/resources/RangedWeapons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/units/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/units/Army.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/units/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/units/Brigade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/units/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/units/Coalition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/units/CoalitionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/units/CoalitionBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/AllArmySoldiersByWeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/AllArmySoldiersByWeaponType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/AllSoldiersOverSpecificAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/AllSoldiersOverSpecificAge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/AverageArmyAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/AverageArmyAge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/OverallArmyDamage.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/OverallArmyDamage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/OverallArmyDurability.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/OverallArmyDurability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/SortByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/SortByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/SortByTypeAndName.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/SortByTypeAndName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/utils/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapons/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/weapons/MeleeWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapons/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/weapons/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/weapons/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,27 +45,61 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Cn5NBZSnHWRt1BL6SaZ5Wr1iyH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/themo/Desktop/GitHub/JavaBattlefieldv4/src/resources"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-17",
+    "last_opened_file_path": "C:/Users/themo/Desktop/GitHub/JavaBattlefieldv4/game/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\game\src" />
+      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\utils" />
+      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\models\src" />
       <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\src\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\src" />
       <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4" />
+      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\utils\src" />
+      <recent name="C:\Users\themo\Desktop\GitHub\JavaBattlefieldv4\src" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="JavaBattlefieldApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="JavaBattlefieldApp" />
+      <module name="game" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="JavaBattlefieldv4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="JavaBattlefieldv4" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,7 +110,26 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d38eeb1d-0836-435d-8ec3-50b15185043b" name="Changes" comment="" />
+      <created>1659425467257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659425467257</updated>
+    </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
